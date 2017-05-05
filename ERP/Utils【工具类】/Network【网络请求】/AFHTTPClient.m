@@ -26,6 +26,8 @@
     NSString * url = [joinUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"%@", url);
     
+    //NSData * paramsJSON = [NSJSONSerialization dataWithJSONObject:params options:0 error:NULL];
+    
     [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if(success){
