@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="CKl-Xh-Dyi">
             <objects>
-                <viewController id="tqo-am-GXa" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="tqo-am-GXa" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9IS-hw-zcv"/>
                         <viewControllerLayoutGuide type="bottom" id="WgE-YB-bMx"/>

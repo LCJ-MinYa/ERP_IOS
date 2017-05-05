@@ -1,22 +1,21 @@
 //
-//  ViewController.m
+//  LoginViewController.m
 //  ERP
 //
 //  Created by minya on 2017/5/5.
 //  Copyright © 2017年 minya. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 
-@interface ViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"22");
     // Do any additional setup after loading the view.
 }
 
