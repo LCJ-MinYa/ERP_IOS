@@ -19,6 +19,15 @@
     
     //程序启动入口
     
+    //1.创建窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    //2.判断用户是否登录（未登录显示登录界面，已登录显示主界面）
+    
+    
+    //3.显示窗口
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -11,8 +11,10 @@
 		3548BE181EBC0CC7000E0B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE161EBC0CC7000E0B16 /* LaunchScreen.storyboard */; };
 		3548BE231EBC0CC7000E0B16 /* ERPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE221EBC0CC7000E0B16 /* ERPTests.m */; };
 		3548BE2E1EBC0CC7000E0B16 /* ERPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE2D1EBC0CC7000E0B16 /* ERPUITests.m */; };
-		3548BE471EBC104A000E0B16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE451EBC104A000E0B16 /* AppDelegate.m */; };
-		3548BE481EBC104A000E0B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE461EBC104A000E0B16 /* main.m */; };
+		3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE4D1EBC1719000E0B16 /* AppDelegate.m */; };
+		3548BE511EBC1719000E0B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE4E1EBC1719000E0B16 /* main.m */; };
+		3548BE6C1EBC21EA000E0B16 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE6B1EBC21EA000E0B16 /* Podfile */; };
+		E7C6E86DCDE1DE0B245638C9 /* libPods-ERP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B5561A69F3145898583B2C /* libPods-ERP.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E8A13F5273723815B8C176C /* Pods-ERP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.debug.xcconfig"; sourceTree = "<group>"; };
 		3548BE051EBC0CC7000E0B16 /* ERP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3548BE141EBC0CC7000E0B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3548BE171EBC0CC7000E0B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,9 +46,12 @@
 		3548BE291EBC0CC7000E0B16 /* ERPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3548BE2D1EBC0CC7000E0B16 /* ERPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ERPUITests.m; sourceTree = "<group>"; };
 		3548BE2F1EBC0CC7000E0B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3548BE441EBC104A000E0B16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3548BE451EBC104A000E0B16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3548BE461EBC104A000E0B16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3548BE4C1EBC1719000E0B16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3548BE4D1EBC1719000E0B16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3548BE4E1EBC1719000E0B16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3548BE6B1EBC21EA000E0B16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.release.xcconfig"; sourceTree = "<group>"; };
+		F3B5561A69F3145898583B2C /* libPods-ERP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ERP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C6E86DCDE1DE0B245638C9 /* libPods-ERP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,13 +80,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E8A7D33B29C64568704B17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3B5561A69F3145898583B2C /* libPods-ERP.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3548BDFC1EBC0CC7000E0B16 = {
 			isa = PBXGroup;
 			children = (
+				3548BE6B1EBC21EA000E0B16 /* Podfile */,
 				3548BE071EBC0CC7000E0B16 /* ERP */,
 				3548BE211EBC0CC7000E0B16 /* ERPTests */,
 				3548BE2C1EBC0CC7000E0B16 /* ERPUITests */,
 				3548BE061EBC0CC7000E0B16 /* Products */,
+				7D8689FC3B263B9B087DA3E9 /* Pods */,
+				00E8A7D33B29C64568704B17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +114,8 @@
 		3548BE071EBC0CC7000E0B16 /* ERP */ = {
 			isa = PBXGroup;
 			children = (
-				3548BE431EBC104A000E0B16 /* Enter(程序入口) */,
+				3548BE4B1EBC1719000E0B16 /* Enter【程序入口】 */,
+				3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */,
 				3548BE141EBC0CC7000E0B16 /* Assets.xcassets */,
 				3548BE161EBC0CC7000E0B16 /* LaunchScreen.storyboard */,
 				3548BE191EBC0CC7000E0B16 /* Info.plist */,
@@ -130,14 +149,30 @@
 			path = ERPUITests;
 			sourceTree = "<group>";
 		};
-		3548BE431EBC104A000E0B16 /* Enter(程序入口) */ = {
+		3548BE4B1EBC1719000E0B16 /* Enter【程序入口】 */ = {
 			isa = PBXGroup;
 			children = (
-				3548BE441EBC104A000E0B16 /* AppDelegate.h */,
-				3548BE451EBC104A000E0B16 /* AppDelegate.m */,
-				3548BE461EBC104A000E0B16 /* main.m */,
+				3548BE4C1EBC1719000E0B16 /* AppDelegate.h */,
+				3548BE4D1EBC1719000E0B16 /* AppDelegate.m */,
+				3548BE4E1EBC1719000E0B16 /* main.m */,
 			);
-			path = "Enter(程序入口)";
+			path = "Enter【程序入口】";
+			sourceTree = "<group>";
+		};
+		3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Utils【工具类】";
+			sourceTree = "<group>";
+		};
+		7D8689FC3B263B9B087DA3E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E8A13F5273723815B8C176C /* Pods-ERP.debug.xcconfig */,
+				F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3548BE321EBC0CC7000E0B16 /* Build configuration list for PBXNativeTarget "ERP" */;
 			buildPhases = (
+				2AB9A39BCC612FED08D48AD4 /* [CP] Check Pods Manifest.lock */,
 				3548BE011EBC0CC7000E0B16 /* Sources */,
 				3548BE021EBC0CC7000E0B16 /* Frameworks */,
 				3548BE031EBC0CC7000E0B16 /* Resources */,
+				7857B3CBCFB483E06829B49D /* [CP] Embed Pods Frameworks */,
+				F9DC3842E432CCD06A18E618 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3548BE6C1EBC21EA000E0B16 /* Podfile in Resources */,
 				3548BE181EBC0CC7000E0B16 /* LaunchScreen.storyboard in Resources */,
 				3548BE151EBC0CC7000E0B16 /* Assets.xcassets in Resources */,
 			);
@@ -267,13 +306,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AB9A39BCC612FED08D48AD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7857B3CBCFB483E06829B49D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ERP/Pods-ERP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DC3842E432CCD06A18E618 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ERP/Pods-ERP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3548BE011EBC0CC7000E0B16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3548BE481EBC104A000E0B16 /* main.m in Sources */,
-				3548BE471EBC104A000E0B16 /* AppDelegate.m in Sources */,
+				3548BE511EBC1719000E0B16 /* main.m in Sources */,
+				3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +497,7 @@
 		};
 		3548BE331EBC0CC7000E0B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E8A13F5273723815B8C176C /* Pods-ERP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ERP/Info.plist;
@@ -422,6 +510,7 @@
 		};
 		3548BE341EBC0CC7000E0B16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ERP/Info.plist;
