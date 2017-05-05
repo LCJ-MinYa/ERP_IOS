@@ -17,6 +17,7 @@
 		35A75E3C1EBC5C20003330D3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A75E3A1EBC5C20003330D3 /* Login.storyboard */; };
 		35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */; };
 		35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */; };
+		35CA8DD11EBC83C300BD3415 /* APIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DD01EBC83C300BD3415 /* APIConfig.m */; };
 		E7C6E86DCDE1DE0B245638C9 /* libPods-ERP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B5561A69F3145898583B2C /* libPods-ERP.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		35CA8DCB1EBC667500BD3415 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		35CA8DCF1EBC83C300BD3415 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		35CA8DD01EBC83C300BD3415 /* APIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConfig.m; sourceTree = "<group>"; };
 		F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.release.xcconfig"; sourceTree = "<group>"; };
 		F3B5561A69F3145898583B2C /* libPods-ERP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ERP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +125,7 @@
 		3548BE071EBC0CC7000E0B16 /* ERP */ = {
 			isa = PBXGroup;
 			children = (
+				35CA8DCE1EBC835D00BD3415 /* Config */,
 				35A75E331EBC5C20003330D3 /* Class */,
 				3548BE4B1EBC1719000E0B16 /* Enter【程序入口】 */,
 				3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */,
@@ -225,6 +229,15 @@
 				35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */,
 			);
 			path = "Network【网络请求】";
+			sourceTree = "<group>";
+		};
+		35CA8DCE1EBC835D00BD3415 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				35CA8DCF1EBC83C300BD3415 /* APIConfig.h */,
+				35CA8DD01EBC83C300BD3415 /* APIConfig.m */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		7D8689FC3B263B9B087DA3E9 /* Pods */ = {
@@ -425,6 +438,7 @@
 				3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */,
 				35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */,
 				35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */,
+				35CA8DD11EBC83C300BD3415 /* APIConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
