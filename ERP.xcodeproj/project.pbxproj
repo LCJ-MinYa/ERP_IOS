@@ -16,6 +16,7 @@
 		3548BE6C1EBC21EA000E0B16 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE6B1EBC21EA000E0B16 /* Podfile */; };
 		35A75E3C1EBC5C20003330D3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A75E3A1EBC5C20003330D3 /* Login.storyboard */; };
 		35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */; };
+		35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */; };
 		E7C6E86DCDE1DE0B245638C9 /* libPods-ERP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B5561A69F3145898583B2C /* libPods-ERP.a */; };
 /* End PBXBuildFile section */
 
@@ -51,10 +52,12 @@
 		3548BE4C1EBC1719000E0B16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3548BE4D1EBC1719000E0B16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3548BE4E1EBC1719000E0B16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3548BE6B1EBC21EA000E0B16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3548BE6B1EBC21EA000E0B16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		35A75E3A1EBC5C20003330D3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		35CA8DC61EBC5D7500BD3415 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		35CA8DCB1EBC667500BD3415 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.release.xcconfig"; sourceTree = "<group>"; };
 		F3B5561A69F3145898583B2C /* libPods-ERP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ERP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,6 +171,7 @@
 		3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */ = {
 			isa = PBXGroup;
 			children = (
+				35CA8DCA1EBC650000BD3415 /* Network【网络请求】 */,
 			);
 			path = "Utils【工具类】";
 			sourceTree = "<group>";
@@ -212,6 +216,15 @@
 				35A75E3A1EBC5C20003330D3 /* Login.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		35CA8DCA1EBC650000BD3415 /* Network【网络请求】 */ = {
+			isa = PBXGroup;
+			children = (
+				35CA8DCB1EBC667500BD3415 /* AFHTTPClient.h */,
+				35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */,
+			);
+			path = "Network【网络请求】";
 			sourceTree = "<group>";
 		};
 		7D8689FC3B263B9B087DA3E9 /* Pods */ = {
@@ -411,6 +424,7 @@
 				3548BE511EBC1719000E0B16 /* main.m in Sources */,
 				3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */,
 				35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */,
+				35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

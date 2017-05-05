@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "AFHTTPClient.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     //2.判断用户是否登录（未登录显示登录界面，已登录显示主界面）
+    
+    NSString * urlStr = @"http://chat.lichaojun.com/api/getRoomList";
+//    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+//    [manager POST:urlStr parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"%@", responseObject);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"%@", error);
+//    }];
+    [AFHTTPClient PostService:urlStr params:nil returnData:nil];
+    
+    
     UIStoryboard * LoginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     LoginViewController * LoginView = [LoginSB instantiateViewControllerWithIdentifier:@"Login"];
     self.window.rootViewController = LoginView;
