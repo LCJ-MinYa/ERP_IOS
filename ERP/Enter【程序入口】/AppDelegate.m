@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     //2.判断用户是否登录（未登录显示登录界面，已登录显示主界面）
-    
+    UIViewController * Vc = [[UIViewController alloc] init];
+    self.window.rootViewController = Vc;
     
     //3.显示窗口
     [self.window makeKeyAndVisible];

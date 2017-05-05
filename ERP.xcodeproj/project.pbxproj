@@ -14,6 +14,7 @@
 		3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE4D1EBC1719000E0B16 /* AppDelegate.m */; };
 		3548BE511EBC1719000E0B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE4E1EBC1719000E0B16 /* main.m */; };
 		3548BE6C1EBC21EA000E0B16 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE6B1EBC21EA000E0B16 /* Podfile */; };
+		3548BE701EBC2716000E0B16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE6F1EBC2716000E0B16 /* ViewController.m */; };
 		E7C6E86DCDE1DE0B245638C9 /* libPods-ERP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B5561A69F3145898583B2C /* libPods-ERP.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		3548BE4D1EBC1719000E0B16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3548BE4E1EBC1719000E0B16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3548BE6B1EBC21EA000E0B16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3548BE6E1EBC2716000E0B16 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3548BE6F1EBC2716000E0B16 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.release.xcconfig"; sourceTree = "<group>"; };
 		F3B5561A69F3145898583B2C /* libPods-ERP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ERP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +117,7 @@
 		3548BE071EBC0CC7000E0B16 /* ERP */ = {
 			isa = PBXGroup;
 			children = (
+				3548BE6D1EBC2708000E0B16 /* Class */,
 				3548BE4B1EBC1719000E0B16 /* Enter【程序入口】 */,
 				3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */,
 				3548BE141EBC0CC7000E0B16 /* Assets.xcassets */,
@@ -164,6 +168,15 @@
 			children = (
 			);
 			path = "Utils【工具类】";
+			sourceTree = "<group>";
+		};
+		3548BE6D1EBC2708000E0B16 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				3548BE6E1EBC2716000E0B16 /* ViewController.h */,
+				3548BE6F1EBC2716000E0B16 /* ViewController.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		7D8689FC3B263B9B087DA3E9 /* Pods */ = {
@@ -359,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3548BE701EBC2716000E0B16 /* ViewController.m in Sources */,
 				3548BE511EBC1719000E0B16 /* main.m in Sources */,
 				3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */,
 			);
