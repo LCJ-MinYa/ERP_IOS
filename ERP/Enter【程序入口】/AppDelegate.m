@@ -26,7 +26,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     //2.判断用户是否登录（未登录显示登录界面，已登录显示主界面）
-    NSDictionary * params = @{@"profileId":@"10001", @"timestamp":@"1493979588", @"token":@"pmp4yroMkmi1xbF258whfrLrQscUsersNw54jfGQ", @"signstr":@"02858e88710777ebda00bac44e931ec25a0dd329"};
+    NSDictionary * params = @{@"profileId":@"10001", @"timestamp":@"1494210851", @"token":@"pmp4yroMkmi1xbF258whfrLrQscUsersNw54jfGQ", @"signstr":@"36d9b21bcd89b42ecd73f67e0a434dc7b9f5c135"};
     [AFHTTPClient PostService:GLOBAL_INFO params:params success:^(id data) {
         NSLog(@"%@", data);
     } fail:^{
