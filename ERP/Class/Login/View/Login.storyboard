@@ -163,6 +163,10 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="pwdInput" destination="AMv-J5-uN4" id="q72-gl-4Ih"/>
+                        <outlet property="userInput" destination="oSh-hN-AB2" id="uQU-ub-C0v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ih9-d1-6u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,4 +10,8 @@
 
 @interface LoginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *userInput;
+
+@property (weak, nonatomic) IBOutlet UITextField *pwdInput;
+
 @end
