@@ -319,6 +319,7 @@
 				TargetAttributes = {
 					3548BE041EBC0CC7000E0B16 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N8578NSZEV;
 						ProvisioningStyle = Automatic;
 					};
 					3548BE1D1EBC0CC7000E0B16 = {
@@ -578,6 +579,7 @@
 			baseConfigurationReference = 2E8A13F5273723815B8C176C /* Pods-ERP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N8578NSZEV;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = ERP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -592,6 +594,7 @@
 			baseConfigurationReference = F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N8578NSZEV;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = ERP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -20,6 +20,8 @@
     NSString * joinUrl = [API stringByAppendingString:reqUrl];
     NSString * url = [joinUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
+    //封装基本参数
+    
     [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if(success){
