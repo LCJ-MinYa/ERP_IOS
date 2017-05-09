@@ -12,8 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-+(UIViewController *)showRootViewController:(NSString *)view;
-
++ (UIViewController *)showRootViewController:(NSString *)view;
 
 @end
 

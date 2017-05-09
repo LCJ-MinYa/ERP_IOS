@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "AFHTTPClient.h"
 #import "APIConfig.h"
+#import <IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 设置键盘监听管理
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     
     //程序启动入口
     
@@ -43,7 +48,7 @@
     return YES;
 }
 
-+(UIViewController *)showRootViewController:(NSString *)view
++ (UIViewController *)showRootViewController:(NSString *)view
 {
     if([view isEqualToString:@"Login"]){
         UIStoryboard * LoginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];

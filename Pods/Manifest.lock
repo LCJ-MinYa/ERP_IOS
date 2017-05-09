@@ -14,13 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - IQKeyboardManager (4.0.9)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - IQKeyboardManager
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
 
-PODFILE CHECKSUM: e1fceff20f61ab99ef010111f8017ca1d222ca7c
+PODFILE CHECKSUM: c5ded8d4185c50ac53d9f93b17b99883c57e671d
 
 COCOAPODS: 1.1.1
