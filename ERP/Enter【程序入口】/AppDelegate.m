@@ -41,12 +41,12 @@
     [self.window makeKeyAndVisible];
     
     // 设置键盘监听管理
-    [IQKeyboardManager sharedManager].enable = YES;
-    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    [self setKeyBoardManager];
     
     return YES;
 }
 
+//设置判断用户是否登录返回根视图
 + (UIViewController *)showRootViewController:(NSString *)view
 {
     if([view isEqualToString:@"Login"]){
@@ -58,6 +58,17 @@
     }
     return nil;
 }
+
+//设置键盘监听管理
+- (void)setKeyBoardManager
+{
+    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager];
+    keyboardManager.enable = YES;                       //设置是否开启键盘不遮挡输入框
+    keyboardManager.enableAutoToolbar = NO;             //设置不显示自定义完成的顶部条
+    keyboardManager.shouldResignOnTouchOutside = YES;   //设置点击其他区域关闭键盘
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 }
