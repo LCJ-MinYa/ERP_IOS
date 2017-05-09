@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "FeHourGlass.h"
+#import "FeHourGlassViewController.h"
 
 @interface LoginViewController ()
 
@@ -36,4 +38,27 @@
     textField.returnKeyType = UIReturnKeyDone;
 }
 
+- (IBAction)loginBtnClick
+{
+    if([_userInput.text isEqualToString:@""] || [_userInput.text length]==0){
+        NSString * userMsg = @"请输入登录账号";
+        [self alertMsg:userMsg];
+    }else if([_pwdInput.text isEqualToString:@""] || [_pwdInput.text length]==0){
+        NSString * pwdMsg = @"请输入登录密码";
+        [self alertMsg:pwdMsg];
+    }else{
+        NSLog(@"网络请求");
+        
+    }
+}
+
+//封装弹出消息框
+- (void)alertMsg:(NSString *)msg
+{
+    UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"%@", msg);
+    }]];
+    [self presentViewController:alertVC animated:YES completion:nil];
+}
 @end

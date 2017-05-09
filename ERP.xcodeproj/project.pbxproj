@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350DFE301EC1C1D60037CEE0 /* FeHourGlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DFE2F1EC1C1D60037CEE0 /* FeHourGlassViewController.m */; };
+		350DFE331EC1C22C0037CEE0 /* FeHourGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DFE321EC1C22C0037CEE0 /* FeHourGlass.m */; };
+		350DFE371EC1C33F0037CEE0 /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DFE361EC1C33F0037CEE0 /* UIColor+flat.m */; };
 		3548BE151EBC0CC7000E0B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE141EBC0CC7000E0B16 /* Assets.xcassets */; };
 		3548BE181EBC0CC7000E0B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE161EBC0CC7000E0B16 /* LaunchScreen.storyboard */; };
 		3548BE231EBC0CC7000E0B16 /* ERPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE221EBC0CC7000E0B16 /* ERPTests.m */; };
@@ -40,6 +43,12 @@
 
 /* Begin PBXFileReference section */
 		2E8A13F5273723815B8C176C /* Pods-ERP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.debug.xcconfig"; sourceTree = "<group>"; };
+		350DFE2E1EC1C1D60037CEE0 /* FeHourGlassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlassViewController.h; sourceTree = "<group>"; };
+		350DFE2F1EC1C1D60037CEE0 /* FeHourGlassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlassViewController.m; sourceTree = "<group>"; };
+		350DFE311EC1C22C0037CEE0 /* FeHourGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlass.h; sourceTree = "<group>"; };
+		350DFE321EC1C22C0037CEE0 /* FeHourGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlass.m; sourceTree = "<group>"; };
+		350DFE351EC1C33F0037CEE0 /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
+		350DFE361EC1C33F0037CEE0 /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
 		3548BE051EBC0CC7000E0B16 /* ERP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3548BE141EBC0CC7000E0B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3548BE171EBC0CC7000E0B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,6 +106,50 @@
 				F3B5561A69F3145898583B2C /* libPods-ERP.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		350DFE2A1EC1C0710037CEE0 /* Loading【请求动画】 */ = {
+			isa = PBXGroup;
+			children = (
+				350DFE2B1EC1C1A70037CEE0 /* Model */,
+				350DFE2C1EC1C1A70037CEE0 /* Controller */,
+				350DFE2D1EC1C1A70037CEE0 /* View */,
+			);
+			path = "Loading【请求动画】";
+			sourceTree = "<group>";
+		};
+		350DFE2B1EC1C1A70037CEE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		350DFE2C1EC1C1A70037CEE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350DFE311EC1C22C0037CEE0 /* FeHourGlass.h */,
+				350DFE321EC1C22C0037CEE0 /* FeHourGlass.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		350DFE2D1EC1C1A70037CEE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				350DFE2E1EC1C1D60037CEE0 /* FeHourGlassViewController.h */,
+				350DFE2F1EC1C1D60037CEE0 /* FeHourGlassViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		350DFE341EC1C2FE0037CEE0 /* Color【颜色类】 */ = {
+			isa = PBXGroup;
+			children = (
+				350DFE351EC1C33F0037CEE0 /* UIColor+flat.h */,
+				350DFE361EC1C33F0037CEE0 /* UIColor+flat.m */,
+			);
+			path = "Color【颜色类】";
 			sourceTree = "<group>";
 		};
 		3548BDFC1EBC0CC7000E0B16 = {
@@ -175,6 +228,8 @@
 		3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */ = {
 			isa = PBXGroup;
 			children = (
+				350DFE341EC1C2FE0037CEE0 /* Color【颜色类】 */,
+				350DFE2A1EC1C0710037CEE0 /* Loading【请求动画】 */,
 				35CA8DCA1EBC650000BD3415 /* Network【网络请求】 */,
 			);
 			path = "Utils【工具类】";
@@ -435,11 +490,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				350DFE371EC1C33F0037CEE0 /* UIColor+flat.m in Sources */,
 				3548BE511EBC1719000E0B16 /* main.m in Sources */,
 				3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */,
+				350DFE301EC1C1D60037CEE0 /* FeHourGlassViewController.m in Sources */,
 				35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */,
 				35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */,
 				35CA8DD11EBC83C300BD3415 /* APIConfig.m in Sources */,
+				350DFE331EC1C22C0037CEE0 /* FeHourGlass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
