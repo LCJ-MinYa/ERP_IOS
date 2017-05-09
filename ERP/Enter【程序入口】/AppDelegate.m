@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <IQKeyboardManager.h>
 #import "LoginViewController.h"
 #import "AFHTTPClient.h"
 #import "APIConfig.h"
-#import <IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -20,11 +20,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    // 设置键盘监听管理
-    [IQKeyboardManager sharedManager].enable = YES;
-    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
-    
     //程序启动入口
     
     //1.创建窗口
@@ -44,6 +39,10 @@
     
     //3.显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 设置键盘监听管理
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     
     return YES;
 }
