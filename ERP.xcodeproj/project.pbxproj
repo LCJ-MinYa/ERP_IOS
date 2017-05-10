@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		350DFE301EC1C1D60037CEE0 /* FeHourGlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DFE2F1EC1C1D60037CEE0 /* FeHourGlassViewController.m */; };
-		350DFE331EC1C22C0037CEE0 /* FeHourGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DFE321EC1C22C0037CEE0 /* FeHourGlass.m */; };
 		350DFE371EC1C33F0037CEE0 /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DFE361EC1C33F0037CEE0 /* UIColor+flat.m */; };
 		3548BE151EBC0CC7000E0B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE141EBC0CC7000E0B16 /* Assets.xcassets */; };
 		3548BE181EBC0CC7000E0B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE161EBC0CC7000E0B16 /* LaunchScreen.storyboard */; };
@@ -17,6 +15,8 @@
 		3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE4D1EBC1719000E0B16 /* AppDelegate.m */; };
 		3548BE511EBC1719000E0B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3548BE4E1EBC1719000E0B16 /* main.m */; };
 		3548BE6C1EBC21EA000E0B16 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE6B1EBC21EA000E0B16 /* Podfile */; };
+		356D0FAB1EC2A584001155CE /* FeHourGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 356D0FA61EC2A584001155CE /* FeHourGlass.m */; };
+		356D0FAC1EC2A584001155CE /* FeHourGlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356D0FAA1EC2A584001155CE /* FeHourGlassViewController.m */; };
 		35A75E3C1EBC5C20003330D3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A75E3A1EBC5C20003330D3 /* Login.storyboard */; };
 		35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */; };
 		35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */; };
@@ -43,10 +43,6 @@
 
 /* Begin PBXFileReference section */
 		2E8A13F5273723815B8C176C /* Pods-ERP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.debug.xcconfig"; sourceTree = "<group>"; };
-		350DFE2E1EC1C1D60037CEE0 /* FeHourGlassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlassViewController.h; sourceTree = "<group>"; };
-		350DFE2F1EC1C1D60037CEE0 /* FeHourGlassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlassViewController.m; sourceTree = "<group>"; };
-		350DFE311EC1C22C0037CEE0 /* FeHourGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlass.h; sourceTree = "<group>"; };
-		350DFE321EC1C22C0037CEE0 /* FeHourGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlass.m; sourceTree = "<group>"; };
 		350DFE351EC1C33F0037CEE0 /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
 		350DFE361EC1C33F0037CEE0 /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
 		3548BE051EBC0CC7000E0B16 /* ERP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +59,10 @@
 		3548BE4D1EBC1719000E0B16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3548BE4E1EBC1719000E0B16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3548BE6B1EBC21EA000E0B16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		356D0FA51EC2A584001155CE /* FeHourGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlass.h; sourceTree = "<group>"; };
+		356D0FA61EC2A584001155CE /* FeHourGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlass.m; sourceTree = "<group>"; };
+		356D0FA91EC2A584001155CE /* FeHourGlassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlassViewController.h; sourceTree = "<group>"; };
+		356D0FAA1EC2A584001155CE /* FeHourGlassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlassViewController.m; sourceTree = "<group>"; };
 		35A75E3A1EBC5C20003330D3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		35CA8DC61EBC5D7500BD3415 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -106,41 +106,6 @@
 				F3B5561A69F3145898583B2C /* libPods-ERP.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		350DFE2A1EC1C0710037CEE0 /* Loading【请求动画】 */ = {
-			isa = PBXGroup;
-			children = (
-				350DFE2B1EC1C1A70037CEE0 /* Model */,
-				350DFE2C1EC1C1A70037CEE0 /* Controller */,
-				350DFE2D1EC1C1A70037CEE0 /* View */,
-			);
-			path = "Loading【请求动画】";
-			sourceTree = "<group>";
-		};
-		350DFE2B1EC1C1A70037CEE0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		350DFE2C1EC1C1A70037CEE0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				350DFE311EC1C22C0037CEE0 /* FeHourGlass.h */,
-				350DFE321EC1C22C0037CEE0 /* FeHourGlass.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		350DFE2D1EC1C1A70037CEE0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				350DFE2E1EC1C1D60037CEE0 /* FeHourGlassViewController.h */,
-				350DFE2F1EC1C1D60037CEE0 /* FeHourGlassViewController.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		350DFE341EC1C2FE0037CEE0 /* Color【颜色类】 */ = {
@@ -228,11 +193,78 @@
 		3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */ = {
 			isa = PBXGroup;
 			children = (
+				356D0FAD1EC2A5E5001155CE /* ReqLoading【网络请求动画】 */,
+				356D0FA31EC2A584001155CE /* Loading【初始动画】 */,
 				350DFE341EC1C2FE0037CEE0 /* Color【颜色类】 */,
-				350DFE2A1EC1C0710037CEE0 /* Loading【请求动画】 */,
 				35CA8DCA1EBC650000BD3415 /* Network【网络请求】 */,
 			);
 			path = "Utils【工具类】";
+			sourceTree = "<group>";
+		};
+		356D0FA31EC2A584001155CE /* Loading【初始动画】 */ = {
+			isa = PBXGroup;
+			children = (
+				356D0FA41EC2A584001155CE /* Controller */,
+				356D0FA71EC2A584001155CE /* Model */,
+				356D0FA81EC2A584001155CE /* View */,
+			);
+			path = "Loading【初始动画】";
+			sourceTree = "<group>";
+		};
+		356D0FA41EC2A584001155CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				356D0FA51EC2A584001155CE /* FeHourGlass.h */,
+				356D0FA61EC2A584001155CE /* FeHourGlass.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		356D0FA71EC2A584001155CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		356D0FA81EC2A584001155CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				356D0FA91EC2A584001155CE /* FeHourGlassViewController.h */,
+				356D0FAA1EC2A584001155CE /* FeHourGlassViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		356D0FAD1EC2A5E5001155CE /* ReqLoading【网络请求动画】 */ = {
+			isa = PBXGroup;
+			children = (
+				356D0FAE1EC2A5E5001155CE /* Controller */,
+				356D0FAF1EC2A5E5001155CE /* Model */,
+				356D0FB01EC2A5E5001155CE /* View */,
+			);
+			path = "ReqLoading【网络请求动画】";
+			sourceTree = "<group>";
+		};
+		356D0FAE1EC2A5E5001155CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		356D0FAF1EC2A5E5001155CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		356D0FB01EC2A5E5001155CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		35A75E331EBC5C20003330D3 /* Class */ = {
@@ -490,14 +522,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356D0FAC1EC2A584001155CE /* FeHourGlassViewController.m in Sources */,
 				350DFE371EC1C33F0037CEE0 /* UIColor+flat.m in Sources */,
 				3548BE511EBC1719000E0B16 /* main.m in Sources */,
 				3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */,
-				350DFE301EC1C1D60037CEE0 /* FeHourGlassViewController.m in Sources */,
 				35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */,
 				35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */,
 				35CA8DD11EBC83C300BD3415 /* APIConfig.m in Sources */,
-				350DFE331EC1C22C0037CEE0 /* FeHourGlass.m in Sources */,
+				356D0FAB1EC2A584001155CE /* FeHourGlass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

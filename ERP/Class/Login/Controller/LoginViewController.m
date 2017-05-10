@@ -7,8 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "FeHourGlass.h"
-#import "FeHourGlassViewController.h"
 
 @interface LoginViewController ()
 
@@ -18,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     _userInput.delegate = self;
     _pwdInput.delegate = self;
     [self setReyurnText:_userInput];
