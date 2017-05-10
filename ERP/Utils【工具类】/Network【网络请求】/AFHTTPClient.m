@@ -9,17 +9,76 @@
 #import "AFHTTPClient.h"
 #import <AFNetworking.h>
 #import "APIConfig.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation AFHTTPClient
 
+//获取sha1之后的值
++ (NSString *) sha1:(NSString *)input
+{
+    NSData *data = [input dataUsingEncoding:NSUTF8StringEncoding];
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+    CC_SHA1(data.bytes, (unsigned int)data.length, digest);
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+    for(int i=0; i<CC_SHA1_DIGEST_LENGTH; i++) {
+        [output appendFormat:@"%02x", digest[i]];
+    }
+    return output;
+}
+
 //获取ProfileId
-- (NSString *)getProfileId
++ (NSString *)getProfileId
 {
     NSString * profileId = [[NSUserDefaults standardUserDefaults] valueForKey:@"profileId"];
     if([profileId isEqualToString:@""] || [profileId length]==0){
         return @"";
     }
     return profileId;
+}
+
+//获取当前时间戳
++ (NSString *)getTimestamp
+{
+    NSDate * newDate = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval timestamp = [newDate timeIntervalSince1970];
+    NSString * timestampString = [NSString stringWithFormat:@"%f", timestamp];
+    return timestampString;
+}
+
+//获取token
++ (NSString *)getToken
+{
+    NSString * token = [[NSUserDefaults standardUserDefaults] valueForKey:@"token"];
+    if([token isEqualToString:@""] || [token length]==0){
+        return @"";
+    }
+    return token;
+}
+
+//获取生成的signstr
++ (NSString *)getSignstr:(NSMutableDictionary *)newParams
+{
+    NSMutableArray * orgParams = [NSMutableArray array];
+    for(NSString * str in newParams){
+        [orgParams addObject:str];
+    }
+    NSArray * newArray = [orgParams sortedArrayUsingSelector:@selector(compare:)];
+    
+    NSString * parStr;
+    for(NSString * key in newArray){
+        NSString * value = [newParams objectForKey:key];
+        if(![value isEqualToString:@""] && [value length]!=0){
+            NSString * str = [NSString stringWithFormat:@"%@%@%@%@%@", parStr, @"&", key, @"=", value];
+            parStr = str;
+        }
+        NSLog(@"%@\n", parStr);
+    }
+    if(![parStr isEqualToString:@""] && [parStr length]!=0){
+        NSString * newParStr = [parStr substringFromIndex:7];
+        NSLog(@"%@", newParStr);
+        return [self sha1:newParStr];
+    }
+    return @"";
 }
 
 + (void)PostService:(NSString *)reqUrl params:(NSDictionary *)params success:(void(^)(id data))success fail:(void(^)())fail
@@ -37,10 +96,9 @@
         [newParams addEntriesFromDictionary:params];
     }
     [newParams setValue:[self getProfileId] forKey:@"profileId"];
-    [newParams setValue:@"1494210851" forKey:@"timestamp"];
-    [newParams setValue:@"pmp4yroMkmi1xbF258whfrLrQscUsersNw54jfGQ" forKey:@"token"];
-    [newParams setValue:@"36d9b21bcd89b42ecd73f67e0a434dc7b9f5c135" forKey:@"signstr"];
-    NSLog(@"%@", newParams);
+    [newParams setValue:[self getTimestamp] forKey:@"timestamp"];
+    [newParams setValue:[self getToken] forKey:@"token"];
+    [newParams setValue:[self getSignstr:newParams] forKey:@"signstr"];
     
     [manager POST:url parameters:newParams progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
