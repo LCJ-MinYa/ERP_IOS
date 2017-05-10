@@ -12,5 +12,6 @@
 
 NSString * const API = @"http://ydhapi.zhangyuxia.com.cn";
 NSString * const GLOBAL_INFO = @"/api/system/getGlobalInfo";
+NSString * const LOGIN = @"/api/user/login";
 
 @end

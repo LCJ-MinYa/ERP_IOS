@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import <MBProgressHUD.h>
+#import "AFHTTPClient.h"
+#import "APIConfig.h"
 
 @interface LoginViewController ()
 
@@ -47,7 +49,12 @@
         [self alertMsg:pwdMsg];
     }else{
         MBProgressHUD * loading = [self showReqLoading];
-        [self hideReqLoading:loading];
+        [AFHTTPClient PostService:GLOBAL_INFO params:nil success:^(id data) {
+            [self hideReqLoading:loading];
+            NSLog(@"%@", data);
+        } fail:^{
+            NSLog(@"请求错误");
+        }];
     }
 }
 
@@ -65,7 +72,7 @@
 //封装关闭网络请求等待
 - (void)hideReqLoading:(MBProgressHUD *)loadingClass
 {
-    [loadingClass hideAnimated:YES afterDelay:1];
+    [loadingClass hideAnimated:YES afterDelay:0];
 }
 
 //封装弹出消息框

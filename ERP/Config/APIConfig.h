@@ -15,5 +15,7 @@ extern NSString * const API;
 
 //全局初始化请求
 extern NSString * const GLOBAL_INFO;
+//登录接口
+extern NSString * const LOGIN;
 
 @end
