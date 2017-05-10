@@ -49,7 +49,11 @@
         [self alertMsg:pwdMsg];
     }else{
         MBProgressHUD * loading = [self showReqLoading];
-        [AFHTTPClient PostService:GLOBAL_INFO params:nil success:^(id data) {
+        
+        NSMutableDictionary * params = [NSMutableDictionary dictionary];
+        [params setValue:_userInput.text forKey:@"userName"];
+        [params setValue:_pwdInput.text forKey:@"password"];
+        [AFHTTPClient PostService:LOGIN params:params success:^(id data) {
             [self hideReqLoading:loading];
             NSLog(@"%@", data);
         } fail:^{

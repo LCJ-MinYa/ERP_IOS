@@ -64,17 +64,16 @@
     }
     NSArray * newArray = [orgParams sortedArrayUsingSelector:@selector(compare:)];
     
-    NSString * parStr;
+    NSString * parStr = @"";
     for(NSString * key in newArray){
         NSString * value = [newParams objectForKey:key];
         if(![value isEqualToString:@""] && [value length]!=0){
             NSString * str = [NSString stringWithFormat:@"%@%@%@%@%@", parStr, @"&", key, @"=", value];
             parStr = str;
         }
-        NSLog(@"%@\n", parStr);
     }
     if(![parStr isEqualToString:@""] && [parStr length]!=0){
-        NSString * newParStr = [parStr substringFromIndex:7];
+        NSString * newParStr = [parStr substringFromIndex:1];
         NSLog(@"%@", newParStr);
         return [self sha1:newParStr];
     }
@@ -99,6 +98,7 @@
     [newParams setValue:[self getTimestamp] forKey:@"timestamp"];
     [newParams setValue:[self getToken] forKey:@"token"];
     [newParams setValue:[self getSignstr:newParams] forKey:@"signstr"];
+    NSLog(@"%@", newParams);
     
     [manager POST:url parameters:newParams progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

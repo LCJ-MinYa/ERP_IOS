@@ -27,6 +27,7 @@
     
     //2.判断用户是否登录（未登录显示登录界面，已登录显示主界面）
     //[[NSUserDefaults standardUserDefaults] setValue:@"pmp4yroMkmi1xbF258whfrLrQscUsersNw54jfGQ" forKey:@"token"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"token"];
     NSString * str = [[NSUserDefaults standardUserDefaults] valueForKey:@"token"];
     NSLog(@"%@", str);
     self.window.rootViewController = [AppDelegate showRootViewController:@"Login"];
