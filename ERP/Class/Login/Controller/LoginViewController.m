@@ -55,7 +55,21 @@
         [params setValue:_pwdInput.text forKey:@"password"];
         [AFHTTPClient PostService:LOGIN params:params success:^(id data) {
             [self hideReqLoading:loading];
-            NSLog(@"%@", data);
+            
+            if([data isKindOfClass:[NSDictionary class]]){
+                NSLog(@"------111-------\n");
+            }else{
+                NSLog(@"------xxx-------\n");
+            }
+            if([data isKindOfClass:[NSObject class]]){
+                NSLog(@"------222-------\n");
+            }else{
+                NSLog(@"------ccc-------\n");
+            }
+            //NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            //NSDictionary * data = [result objectForKey:@"data"];
+            //NSString * profileId = [data objectForKey:@"profileId"];
+            //[[NSUserDefaults standardUserDefaults] setValue:[result[@"profileId"] integerValue] forKey:@"profileId"];
         } fail:^{
             NSLog(@"请求错误");
         }];

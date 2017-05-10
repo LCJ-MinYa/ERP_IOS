@@ -83,6 +83,7 @@
 + (void)PostService:(NSString *)reqUrl params:(NSDictionary *)params success:(void(^)(id data))success fail:(void(^)())fail
 {
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     //设置请求超时时间
     manager.requestSerializer.timeoutInterval = 5.0;
     //转换请求链接为UTF8
