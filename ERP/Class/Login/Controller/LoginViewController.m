@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import <MBProgressHUD.h>
 
 @interface LoginViewController ()
 
@@ -45,9 +46,26 @@
         NSString * pwdMsg = @"请输入登录密码";
         [self alertMsg:pwdMsg];
     }else{
-        NSLog(@"网络请求");
-        
+        MBProgressHUD * loading = [self showReqLoading];
+        [self hideReqLoading:loading];
     }
+}
+
+//封装显示网络请求等待
+- (MBProgressHUD *)showReqLoading
+{
+    MBProgressHUD * loading = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    loading.mode = MBProgressHUDModeIndeterminate;
+    loading.label.text = @"登录中...";
+    loading.contentColor = [UIColor whiteColor];
+    loading.bezelView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+    return loading;
+}
+
+//封装关闭网络请求等待
+- (void)hideReqLoading:(MBProgressHUD *)loadingClass
+{
+    [loadingClass hideAnimated:YES afterDelay:1];
 }
 
 //封装弹出消息框

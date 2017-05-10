@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7620C3BF6C558AF5A63CF9B4F5BC7049'
-               BlueprintName = 'Pods-ERP'
+               BlueprintIdentifier = '586F2DFA9BDCC6675C2546793A69E5CC'
+               BlueprintName = 'MBProgressHUD'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-ERP.a'>
+               BuildableName = 'libMBProgressHUD.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

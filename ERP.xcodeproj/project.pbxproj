@@ -193,7 +193,6 @@
 		3548BE4F1EBC1719000E0B16 /* Utils【工具类】 */ = {
 			isa = PBXGroup;
 			children = (
-				356D0FAD1EC2A5E5001155CE /* ReqLoading【网络请求动画】 */,
 				356D0FA31EC2A584001155CE /* Loading【初始动画】 */,
 				350DFE341EC1C2FE0037CEE0 /* Color【颜色类】 */,
 				35CA8DCA1EBC650000BD3415 /* Network【网络请求】 */,
@@ -232,37 +231,6 @@
 			children = (
 				356D0FA91EC2A584001155CE /* FeHourGlassViewController.h */,
 				356D0FAA1EC2A584001155CE /* FeHourGlassViewController.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		356D0FAD1EC2A5E5001155CE /* ReqLoading【网络请求动画】 */ = {
-			isa = PBXGroup;
-			children = (
-				356D0FAE1EC2A5E5001155CE /* Controller */,
-				356D0FAF1EC2A5E5001155CE /* Model */,
-				356D0FB01EC2A5E5001155CE /* View */,
-			);
-			path = "ReqLoading【网络请求动画】";
-			sourceTree = "<group>";
-		};
-		356D0FAE1EC2A5E5001155CE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		356D0FAF1EC2A5E5001155CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		356D0FB01EC2A5E5001155CE /* View */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
