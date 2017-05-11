@@ -35,6 +35,8 @@
         self.window.rootViewController = [AppDelegate showRootViewController:@"Login"];
     }
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+
     //3.显示窗口
     [self.window makeKeyAndVisible];
     
