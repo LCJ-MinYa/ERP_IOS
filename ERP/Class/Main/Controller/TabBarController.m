@@ -37,8 +37,10 @@
      */
     
     //添加第一个导航子控制器[商品]
-    ProductViewController * product = [[ProductViewController alloc] init];
+    UIStoryboard * ProductSB = [UIStoryboard storyboardWithName:@"Product" bundle:nil];
+    ProductViewController * product = [ProductSB instantiateViewControllerWithIdentifier:@"Product"];
     [self creatNav:product image:[UIImage imageNamed:@"product"] selectImage:[UIImage imageNamed:@"select_product"] title:@"商品"];
+    product.navigationController.navigationBar.hidden = YES;
     
     //添加第二个导航子控制器[购物车]
     CartViewController * cart = [[CartViewController alloc] init];

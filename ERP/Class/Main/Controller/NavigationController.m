@@ -30,6 +30,7 @@
      是一个字典数据（类似js的数组,所以不能直接[UIColor whiteColor]）
      */
     navBar.titleTextAttributes = textAttr;
+    navBar.hidden = YES;
 }
 
 - (void)viewDidLoad {
