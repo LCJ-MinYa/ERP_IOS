@@ -10,6 +10,8 @@
 #import <MBProgressHUD.h>
 #import "AFHTTPClient.h"
 #import "APIConfig.h"
+#import "AppDelegate.h"
+#import "TabBarController.h"
 
 @interface LoginViewController ()
 
@@ -60,6 +62,11 @@
             NSDictionary * result = response[@"data"];
             [[NSUserDefaults standardUserDefaults] setValue:result[@"profileId"] forKey:@"profileId"];
             [[NSUserDefaults standardUserDefaults] setValue:result[@"token"] forKey:@"token"];
+            
+            //切换根视图控制器
+            AppDelegate * main = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            TabBarController * tabBarView = [[TabBarController alloc] init];
+            main.window.rootViewController = tabBarView;
         } fail:^{
             NSLog(@"请求错误");
         }];

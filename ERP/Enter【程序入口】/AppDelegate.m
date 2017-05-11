@@ -23,6 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //程序启动入口
     
+    //[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"token"];
+    
     //1.创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -35,7 +37,7 @@
         self.window.rootViewController = [AppDelegate showRootViewController:@"Login"];
     }
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
     //3.显示窗口
     [self.window makeKeyAndVisible];
