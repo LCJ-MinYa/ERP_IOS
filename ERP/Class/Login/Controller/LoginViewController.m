@@ -56,20 +56,10 @@
         [AFHTTPClient PostService:LOGIN params:params success:^(id data) {
             [self hideReqLoading:loading];
             
-            if([data isKindOfClass:[NSDictionary class]]){
-                NSLog(@"------111-------\n");
-            }else{
-                NSLog(@"------xxx-------\n");
-            }
-            if([data isKindOfClass:[NSObject class]]){
-                NSLog(@"------222-------\n");
-            }else{
-                NSLog(@"------ccc-------\n");
-            }
-            //NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-            //NSDictionary * data = [result objectForKey:@"data"];
-            //NSString * profileId = [data objectForKey:@"profileId"];
-            //[[NSUserDefaults standardUserDefaults] setValue:[result[@"profileId"] integerValue] forKey:@"profileId"];
+            NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            NSDictionary * result = response[@"data"];
+            [[NSUserDefaults standardUserDefaults] setValue:result[@"profileId"] forKey:@"profileId"];
+            [[NSUserDefaults standardUserDefaults] setValue:result[@"token"] forKey:@"token"];
         } fail:^{
             NSLog(@"请求错误");
         }];

@@ -21,6 +21,13 @@
 		35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */; };
 		35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */; };
 		35CA8DD11EBC83C300BD3415 /* APIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DD01EBC83C300BD3415 /* APIConfig.m */; };
+		35DAAEE71EC3F93600AF7D21 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DAAEE61EC3F93600AF7D21 /* TabBarController.m */; };
+		35DAAEEA1EC3F96900AF7D21 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DAAEE91EC3F96900AF7D21 /* NavigationController.m */; };
+		35DAAEED1EC3FA8300AF7D21 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DAAEEC1EC3FA8300AF7D21 /* ProductViewController.m */; };
+		35DAAEF01EC3FA9A00AF7D21 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DAAEEF1EC3FA9A00AF7D21 /* CartViewController.m */; };
+		35DAAEF31EC3FAAC00AF7D21 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DAAEF21EC3FAAC00AF7D21 /* MineViewController.m */; };
+		35DAAEF61EC3FABA00AF7D21 /* MsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DAAEF51EC3FABA00AF7D21 /* MsgViewController.m */; };
+		35DAAEF91EC3FAC700AF7D21 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DAAEF81EC3FAC700AF7D21 /* OrderViewController.m */; };
 		E7C6E86DCDE1DE0B245638C9 /* libPods-ERP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B5561A69F3145898583B2C /* libPods-ERP.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +77,20 @@
 		35CA8DCC1EBC667500BD3415 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		35CA8DCF1EBC83C300BD3415 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
 		35CA8DD01EBC83C300BD3415 /* APIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConfig.m; sourceTree = "<group>"; };
+		35DAAEE51EC3F93600AF7D21 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		35DAAEE61EC3F93600AF7D21 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		35DAAEE81EC3F96900AF7D21 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		35DAAEE91EC3F96900AF7D21 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		35DAAEEB1EC3FA8300AF7D21 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		35DAAEEC1EC3FA8300AF7D21 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		35DAAEEE1EC3FA9A00AF7D21 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		35DAAEEF1EC3FA9A00AF7D21 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		35DAAEF11EC3FAAC00AF7D21 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		35DAAEF21EC3FAAC00AF7D21 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		35DAAEF41EC3FABA00AF7D21 /* MsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgViewController.h; sourceTree = "<group>"; };
+		35DAAEF51EC3FABA00AF7D21 /* MsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgViewController.m; sourceTree = "<group>"; };
+		35DAAEF71EC3FAC700AF7D21 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		35DAAEF81EC3FAC700AF7D21 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
 		F3123B3E56B704C07AB45EE3 /* Pods-ERP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERP/Pods-ERP.release.xcconfig"; sourceTree = "<group>"; };
 		F3B5561A69F3145898583B2C /* libPods-ERP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ERP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -238,6 +259,12 @@
 		35A75E331EBC5C20003330D3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				35DAAECA1EC3F85E00AF7D21 /* Cart */,
+				35DAAECE1EC3F85E00AF7D21 /* Main */,
+				35DAAED21EC3F85E00AF7D21 /* Mine */,
+				35DAAED61EC3F85E00AF7D21 /* Msg */,
+				35DAAEDA1EC3F85E00AF7D21 /* Order */,
+				35DAAEDE1EC3F85E00AF7D21 /* Product */,
 				35A75E341EBC5C20003330D3 /* Login */,
 			);
 			path = Class;
@@ -293,6 +320,206 @@
 				35CA8DD01EBC83C300BD3415 /* APIConfig.m */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		35DAAECA1EC3F85E00AF7D21 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAECB1EC3F85E00AF7D21 /* Controller */,
+				35DAAECC1EC3F85E00AF7D21 /* Model */,
+				35DAAECD1EC3F85E00AF7D21 /* View */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		35DAAECB1EC3F85E00AF7D21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEEE1EC3FA9A00AF7D21 /* CartViewController.h */,
+				35DAAEEF1EC3FA9A00AF7D21 /* CartViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35DAAECC1EC3F85E00AF7D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35DAAECD1EC3F85E00AF7D21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35DAAECE1EC3F85E00AF7D21 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAECF1EC3F85E00AF7D21 /* Controller */,
+				35DAAED01EC3F85E00AF7D21 /* Model */,
+				35DAAED11EC3F85E00AF7D21 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		35DAAECF1EC3F85E00AF7D21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEE51EC3F93600AF7D21 /* TabBarController.h */,
+				35DAAEE61EC3F93600AF7D21 /* TabBarController.m */,
+				35DAAEE81EC3F96900AF7D21 /* NavigationController.h */,
+				35DAAEE91EC3F96900AF7D21 /* NavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35DAAED01EC3F85E00AF7D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35DAAED11EC3F85E00AF7D21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35DAAED21EC3F85E00AF7D21 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAED31EC3F85E00AF7D21 /* Controller */,
+				35DAAED41EC3F85E00AF7D21 /* Model */,
+				35DAAED51EC3F85E00AF7D21 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		35DAAED31EC3F85E00AF7D21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEF11EC3FAAC00AF7D21 /* MineViewController.h */,
+				35DAAEF21EC3FAAC00AF7D21 /* MineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35DAAED41EC3F85E00AF7D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35DAAED51EC3F85E00AF7D21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35DAAED61EC3F85E00AF7D21 /* Msg */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAED71EC3F85E00AF7D21 /* Controller */,
+				35DAAED81EC3F85E00AF7D21 /* Model */,
+				35DAAED91EC3F85E00AF7D21 /* View */,
+			);
+			path = Msg;
+			sourceTree = "<group>";
+		};
+		35DAAED71EC3F85E00AF7D21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEF41EC3FABA00AF7D21 /* MsgViewController.h */,
+				35DAAEF51EC3FABA00AF7D21 /* MsgViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35DAAED81EC3F85E00AF7D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35DAAED91EC3F85E00AF7D21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35DAAEDA1EC3F85E00AF7D21 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEDB1EC3F85E00AF7D21 /* Controller */,
+				35DAAEDC1EC3F85E00AF7D21 /* Model */,
+				35DAAEDD1EC3F85E00AF7D21 /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		35DAAEDB1EC3F85E00AF7D21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEF71EC3FAC700AF7D21 /* OrderViewController.h */,
+				35DAAEF81EC3FAC700AF7D21 /* OrderViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35DAAEDC1EC3F85E00AF7D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35DAAEDD1EC3F85E00AF7D21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35DAAEDE1EC3F85E00AF7D21 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEDF1EC3F85E00AF7D21 /* Controller */,
+				35DAAEE01EC3F85E00AF7D21 /* Model */,
+				35DAAEE11EC3F85E00AF7D21 /* View */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		35DAAEDF1EC3F85E00AF7D21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35DAAEEB1EC3FA8300AF7D21 /* ProductViewController.h */,
+				35DAAEEC1EC3FA8300AF7D21 /* ProductViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35DAAEE01EC3F85E00AF7D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35DAAEE11EC3F85E00AF7D21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7D8689FC3B263B9B087DA3E9 /* Pods */ = {
@@ -491,11 +718,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				356D0FAC1EC2A584001155CE /* FeHourGlassViewController.m in Sources */,
+				35DAAEF91EC3FAC700AF7D21 /* OrderViewController.m in Sources */,
 				350DFE371EC1C33F0037CEE0 /* UIColor+flat.m in Sources */,
+				35DAAEF31EC3FAAC00AF7D21 /* MineViewController.m in Sources */,
+				35DAAEED1EC3FA8300AF7D21 /* ProductViewController.m in Sources */,
 				3548BE511EBC1719000E0B16 /* main.m in Sources */,
+				35DAAEF01EC3FA9A00AF7D21 /* CartViewController.m in Sources */,
+				35DAAEF61EC3FABA00AF7D21 /* MsgViewController.m in Sources */,
+				35DAAEE71EC3F93600AF7D21 /* TabBarController.m in Sources */,
 				3548BE501EBC1719000E0B16 /* AppDelegate.m in Sources */,
 				35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */,
 				35CA8DCD1EBC667500BD3415 /* AFHTTPClient.m in Sources */,
+				35DAAEEA1EC3F96900AF7D21 /* NavigationController.m in Sources */,
 				35CA8DD11EBC83C300BD3415 /* APIConfig.m in Sources */,
 				356D0FAB1EC2A584001155CE /* FeHourGlass.m in Sources */,
 			);
