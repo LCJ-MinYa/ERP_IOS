@@ -61,9 +61,27 @@
     NSLog(@"2222");
 }
 
+//页面数据加载初始化
 - (void)initRequest
 {
     [AFHTTPClient PostService:self reqUrl:GLOBAL_INFO params:nil success:^(id data) {
+        [self getBannerNoticeData];
+        [self getProductListData];
+    } fail:nil loadingText:nil showLoading:NO];
+}
+
+//获取商品banner和公告
+- (void)getBannerNoticeData
+{
+    [AFHTTPClient PostService:self reqUrl:BANNER_NOTICE params:nil success:^(id data) {
+        
+    } fail:nil loadingText:nil showLoading:NO];
+}
+
+//获取商品列表
+- (void)getProductListData
+{
+    [AFHTTPClient PostService:self reqUrl:PRODUCT_LIST params:nil success:^(id data) {
         
     } fail:nil loadingText:nil showLoading:NO];
 }

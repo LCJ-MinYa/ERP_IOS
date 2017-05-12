@@ -18,4 +18,7 @@ extern NSString * const GLOBAL_INFO;
 //登录接口
 extern NSString * const LOGIN;
 
+//商品接口
+extern NSString * const BANNER_NOTICE;      //商品首页banner和公告信息
+extern NSString * const PRODUCT_LIST;      //商品首页banner和公告信息
 @end
