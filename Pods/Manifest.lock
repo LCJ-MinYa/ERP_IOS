@@ -16,17 +16,25 @@ PODS:
     - AFNetworking/NSURLSession
   - IQKeyboardManager (4.0.9)
   - MBProgressHUD (1.0.0)
+  - SDCycleScrollView (1.66):
+    - SDWebImage (~> 4.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - IQKeyboardManager
   - MBProgressHUD (~> 1.0.0)
+  - SDCycleScrollView (~> 1.64)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 100c36d909ae329e3dcba725e69fddbcc4117553
+PODFILE CHECKSUM: 2cea05d5a25f402a81f1afdb1cce91a1a2bd8b98
 
 COCOAPODS: 1.1.1

@@ -11,6 +11,7 @@
 #import "AFHTTPClient.h"
 #import "APIConfig.h"
 #import <MBProgressHUD.h>
+#import <SDCycleScrollView.h>
 
 @interface ProductViewController ()
 
@@ -98,7 +99,20 @@
 {
     [AFHTTPClient PostService:self reqUrl:BANNER_NOTICE params:nil success:^(id data) {
         dispatch_semaphore_signal(semaphore);
+        NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSArray * bannerData = response[@"banner"];
+        [self dealBannerData:bannerData];
+        
     } fail:nil loadingText:nil showLoading:NO];
+}
+
+//处理商品banner
+- (void)dealBannerData:(NSArray *)bannerData
+{
+    NSLog(@"%@", bannerData);
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    SDCycleScrollView * bannerView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/3) imageNamesGroup:@[@"nav_bg",@"cart",@"mine"]];
+    //[_ScrollBox addSubview:bannerView];
 }
 
 //获取商品列表
