@@ -8,6 +8,8 @@
 
 #import "ProductViewController.h"
 #import "ProductClassViewController.h"
+#import "AFHTTPClient.h"
+#import "APIConfig.h"
 
 @interface ProductViewController ()
 
@@ -23,16 +25,20 @@
     [super viewDidLoad];
     
     [self initView];
+    [self initRequest];
 }
 
 //初始化视图和绑定事件
 - (void)initView
 {
     _searchView.layer.cornerRadius = 2;
+    
+    //跳转商品分类
     _leftImg.userInteractionEnabled = YES;
     UITapGestureRecognizer * singleLeftTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleLeftTapFunc:)];
     [_leftImg addGestureRecognizer:singleLeftTap];
     
+    //跳转扫一扫
     _rightImg.userInteractionEnabled = YES;
     UITapGestureRecognizer * singleRightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleRightTapFunc:)];
     [_rightImg addGestureRecognizer:singleRightTap];
@@ -53,6 +59,13 @@
 - (void)singleRightTapFunc:(UITapGestureRecognizer *)gestureRecognizer
 {
     NSLog(@"2222");
+}
+
+- (void)initRequest
+{
+    [AFHTTPClient PostService:self reqUrl:GLOBAL_INFO params:nil success:^(id data) {
+        
+    } fail:nil loadingText:nil showLoading:NO];
 }
 
 @end

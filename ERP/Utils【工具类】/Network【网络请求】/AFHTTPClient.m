@@ -10,6 +10,8 @@
 #import <AFNetworking.h>
 #import "APIConfig.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <MBProgressHUD.h>
+#import "LoginViewController.h"
 
 @implementation AFHTTPClient
 
@@ -80,8 +82,14 @@
     return @"";
 }
 
-+ (void)PostService:(NSString *)reqUrl params:(NSDictionary *)params success:(void(^)(id data))success fail:(void(^)())fail
++ (void)PostService:(UIViewController *)view reqUrl:(NSString *)reqUrl params:(NSDictionary *)params success:(void(^)(id data))success fail:(void(^)())fail loadingText:(NSString *)loadingText showLoading:(BOOL)showLoading
 {
+    MBProgressHUD * loading;
+    //显示加载框
+    if(showLoading){
+        loading = [self showReqLoading:view loadingText:loadingText];
+    }
+    
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     //设置请求超时时间
@@ -103,8 +111,18 @@
     
     [manager POST:url parameters:newParams progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if(success){
-            success(responseObject);
+        //关闭加载框
+        if(showLoading){
+            [self hideReqLoading:loading];
+        }
+        NSDictionary * response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@", response);
+        if([response[@"error_code"] intValue] == -12 || [response[@"error_code"] intValue] == -15){
+            [self goLoginView:view];
+        }else{
+            if(success){
+                success(responseObject);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
@@ -112,6 +130,34 @@
             fail();
         }
     }];
-    
+}
+
+//登录过期跳转login页面
++ (void)goLoginView:(UIViewController *)view
+{
+    UIStoryboard * LoginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    LoginViewController * LoginView = [LoginSB instantiateViewControllerWithIdentifier:@"Login"];
+    [view presentViewController:LoginView animated:YES completion:nil];
+}
+
+//封装显示网络请求等待
++ (MBProgressHUD *)showReqLoading:(UIViewController *)view loadingText:(NSString *)loadingText
+{
+    MBProgressHUD * loading = [MBProgressHUD showHUDAddedTo:view.view animated:YES];
+    loading.mode = MBProgressHUDModeIndeterminate;
+    if([loadingText isEqualToString:@""] || [loadingText length]==0){
+        loading.label.text = @"正在加载...";
+    }else{
+        loading.label.text = loadingText;
+    }
+    loading.contentColor = [UIColor whiteColor];
+    loading.bezelView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+    return loading;
+}
+
+//封装关闭网络请求等待
++ (void)hideReqLoading:(MBProgressHUD *)loadingClass
+{
+    [loadingClass hideAnimated:YES afterDelay:0];
 }
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import <MBProgressHUD.h>
 #import "AFHTTPClient.h"
 #import "APIConfig.h"
 #import "AppDelegate.h"
@@ -50,14 +49,10 @@
         NSString * pwdMsg = @"请输入登录密码";
         [self alertMsg:pwdMsg];
     }else{
-        MBProgressHUD * loading = [self showReqLoading];
-        
         NSMutableDictionary * params = [NSMutableDictionary dictionary];
         [params setValue:_userInput.text forKey:@"userName"];
         [params setValue:_pwdInput.text forKey:@"password"];
-        [AFHTTPClient PostService:LOGIN params:params success:^(id data) {
-            [self hideReqLoading:loading];
-            
+        [AFHTTPClient PostService:self reqUrl:LOGIN params:params success:^(id data) {
             NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             NSDictionary * result = response[@"data"];
             [[NSUserDefaults standardUserDefaults] setValue:result[@"profileId"] forKey:@"profileId"];
@@ -69,25 +64,8 @@
             main.window.rootViewController = tabBarView;
         } fail:^{
             NSLog(@"请求错误");
-        }];
+        } loadingText:@"登录中..." showLoading:YES];
     }
-}
-
-//封装显示网络请求等待
-- (MBProgressHUD *)showReqLoading
-{
-    MBProgressHUD * loading = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    loading.mode = MBProgressHUDModeIndeterminate;
-    loading.label.text = @"登录中...";
-    loading.contentColor = [UIColor whiteColor];
-    loading.bezelView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
-    return loading;
-}
-
-//封装关闭网络请求等待
-- (void)hideReqLoading:(MBProgressHUD *)loadingClass
-{
-    [loadingClass hideAnimated:YES afterDelay:0];
 }
 
 //封装弹出消息框
