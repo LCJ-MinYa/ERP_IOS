@@ -76,7 +76,6 @@
     }
     if(![parStr isEqualToString:@""] && [parStr length]!=0){
         NSString * newParStr = [parStr substringFromIndex:1];
-        NSLog(@"%@", newParStr);
         return [self sha1:newParStr];
     }
     return @"";
@@ -107,16 +106,16 @@
     [newParams setValue:[self getTimestamp] forKey:@"timestamp"];
     [newParams setValue:[self getToken] forKey:@"token"];
     [newParams setValue:[self getSignstr:newParams] forKey:@"signstr"];
-    NSLog(@"%@", newParams);
+    //NSLog(@"%@", newParams);
     
     [manager POST:url parameters:newParams progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //关闭加载框
         if(showLoading){
-            [self hideReqLoading:loading];
+            //[self hideReqLoading:loading];
         }
         NSDictionary * response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"%@", response);
+        //NSLog(@"%@", response);
         if([response[@"error_code"] intValue] == -12 || [response[@"error_code"] intValue] == -15){
             [self goLoginView:view];
         }else{

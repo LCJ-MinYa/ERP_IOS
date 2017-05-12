@@ -10,6 +10,7 @@
 #import "ProductClassViewController.h"
 #import "AFHTTPClient.h"
 #import "APIConfig.h"
+#import <MBProgressHUD.h>
 
 @interface ProductViewController ()
 
@@ -61,29 +62,71 @@
     NSLog(@"2222");
 }
 
-//页面数据加载初始化
+//判断页面数据是非可以加载
 - (void)initRequest
 {
     [AFHTTPClient PostService:self reqUrl:GLOBAL_INFO params:nil success:^(id data) {
-        [self getBannerNoticeData];
-        [self getProductListData];
+        [self getPageData];
     } fail:nil loadingText:nil showLoading:NO];
 }
 
+//页面数据开始加载
+- (void)getPageData
+{
+    MBProgressHUD * loading = [self showReqLoading];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^{
+        [self getBannerNoticeData:semaphore];
+    });
+    dispatch_group_async(group, queue, ^{
+        [self getProductListData:semaphore];
+    });
+    dispatch_group_notify(group, queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        [self hideReqLoading:loading];
+        NSLog(@"关闭loading...");
+    });
+}
+
 //获取商品banner和公告
-- (void)getBannerNoticeData
+- (void)getBannerNoticeData:(dispatch_semaphore_t)semaphore
 {
     [AFHTTPClient PostService:self reqUrl:BANNER_NOTICE params:nil success:^(id data) {
-        
+        NSLog(@"123");
+        NSLog(@"%@\n", data);
+        dispatch_semaphore_signal(semaphore);
     } fail:nil loadingText:nil showLoading:NO];
 }
 
 //获取商品列表
-- (void)getProductListData
+- (void)getProductListData:(dispatch_semaphore_t)semaphore
 {
     [AFHTTPClient PostService:self reqUrl:PRODUCT_LIST params:nil success:^(id data) {
-        
+        NSLog(@"321");
+        NSLog(@"%@\n", data);
+        dispatch_semaphore_signal(semaphore);
     } fail:nil loadingText:nil showLoading:NO];
+}
+
+//封装显示网络请求等待
+- (MBProgressHUD *)showReqLoading
+{
+    MBProgressHUD * loading = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    loading.mode = MBProgressHUDModeIndeterminate;
+    loading.label.text = @"正在加载...";
+    loading.contentColor = [UIColor whiteColor];
+    loading.bezelView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+    return loading;
+}
+
+//封装关闭网络请求等待
+- (void)hideReqLoading:(MBProgressHUD *)loadingClass
+{
+    NSLog(@"-------");
+    [loadingClass hideAnimated:YES afterDelay:0];
 }
 
 @end
