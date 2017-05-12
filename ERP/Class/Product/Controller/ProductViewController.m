@@ -86,8 +86,10 @@
     dispatch_group_notify(group, queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        [self hideReqLoading:loading];
-        NSLog(@"关闭loading...");
+        //通知主线程刷新
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self hideReqLoading:loading];
+        });
     });
 }
 
@@ -95,8 +97,6 @@
 - (void)getBannerNoticeData:(dispatch_semaphore_t)semaphore
 {
     [AFHTTPClient PostService:self reqUrl:BANNER_NOTICE params:nil success:^(id data) {
-        NSLog(@"123");
-        NSLog(@"%@\n", data);
         dispatch_semaphore_signal(semaphore);
     } fail:nil loadingText:nil showLoading:NO];
 }
@@ -105,8 +105,6 @@
 - (void)getProductListData:(dispatch_semaphore_t)semaphore
 {
     [AFHTTPClient PostService:self reqUrl:PRODUCT_LIST params:nil success:^(id data) {
-        NSLog(@"321");
-        NSLog(@"%@\n", data);
         dispatch_semaphore_signal(semaphore);
     } fail:nil loadingText:nil showLoading:NO];
 }
@@ -125,7 +123,6 @@
 //封装关闭网络请求等待
 - (void)hideReqLoading:(MBProgressHUD *)loadingClass
 {
-    NSLog(@"-------");
     [loadingClass hideAnimated:YES afterDelay:0];
 }
 

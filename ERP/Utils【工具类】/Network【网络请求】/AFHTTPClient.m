@@ -112,7 +112,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //关闭加载框
         if(showLoading){
-            //[self hideReqLoading:loading];
+            [self hideReqLoading:loading];
         }
         NSDictionary * response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         //NSLog(@"%@", response);
