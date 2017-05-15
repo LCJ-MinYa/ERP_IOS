@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (weak, nonatomic) IBOutlet UIImageView *leftImg;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImg;
+@property (weak, nonatomic) IBOutlet UIView *scrollContentView;
 
 @end
 
@@ -109,10 +110,9 @@
 //处理商品banner
 - (void)dealBannerData:(NSArray *)bannerData
 {
-    NSLog(@"%@", bannerData);
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     SDCycleScrollView * bannerView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/3) imageNamesGroup:@[@"nav_bg",@"cart",@"mine"]];
-    //[_ScrollBox addSubview:bannerView];
+    [_scrollContentView addSubview:bannerView];
 }
 
 //获取商品列表

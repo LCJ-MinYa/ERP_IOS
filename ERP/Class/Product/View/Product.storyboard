@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -100,35 +99,62 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BU-82-DTq">
-                                <rect key="frame" x="0.0" y="72" width="375" height="657"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQV-Kx-uR9">
-                                        <rect key="frame" x="0.0" y="274" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9BH-Mb-DW7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSJ-6D-DZn">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                <color key="backgroundColor" red="0.48832180730000002" green="0.3891429294" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="bmh-8x-Uf4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQN-5s-KH0">
+                                                <rect key="frame" x="0.0" y="300" width="375" height="600"/>
+                                                <color key="backgroundColor" red="1" green="0.25278043750000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="EX4-LH-fpd"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="VSJ-6D-DZn" firstAttribute="top" secondItem="9BH-Mb-DW7" secondAttribute="top" id="7MZ-uJ-wfR"/>
+                                            <constraint firstItem="AQN-5s-KH0" firstAttribute="top" secondItem="VSJ-6D-DZn" secondAttribute="bottom" id="Er0-E0-wee"/>
+                                            <constraint firstAttribute="bottom" secondItem="AQN-5s-KH0" secondAttribute="bottom" id="W8P-Xe-ars"/>
+                                            <constraint firstAttribute="trailing" secondItem="VSJ-6D-DZn" secondAttribute="trailing" id="XDl-Ha-Dh0"/>
+                                            <constraint firstItem="VSJ-6D-DZn" firstAttribute="leading" secondItem="9BH-Mb-DW7" secondAttribute="leading" id="bnj-jk-Kug"/>
+                                            <constraint firstItem="AQN-5s-KH0" firstAttribute="leading" secondItem="9BH-Mb-DW7" secondAttribute="leading" id="jiC-Bu-FBM"/>
+                                            <constraint firstAttribute="trailing" secondItem="AQN-5s-KH0" secondAttribute="trailing" id="uRP-Sp-n7i"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="DQV-Kx-uR9" secondAttribute="bottom" constant="353" id="1A2-dj-Ati"/>
-                                    <constraint firstAttribute="trailing" secondItem="DQV-Kx-uR9" secondAttribute="trailing" id="N8k-0x-nbM"/>
-                                    <constraint firstItem="DQV-Kx-uR9" firstAttribute="leading" secondItem="6BU-82-DTq" secondAttribute="leading" id="eos-SK-Jo9"/>
-                                    <constraint firstItem="DQV-Kx-uR9" firstAttribute="top" secondItem="6BU-82-DTq" secondAttribute="top" constant="274" id="uj2-pm-eCq"/>
+                                    <constraint firstAttribute="trailing" secondItem="9BH-Mb-DW7" secondAttribute="trailing" id="0Yd-C2-NyZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="9BH-Mb-DW7" secondAttribute="bottom" id="GR3-oa-TWC"/>
+                                    <constraint firstItem="9BH-Mb-DW7" firstAttribute="leading" secondItem="6BU-82-DTq" secondAttribute="leading" id="IIf-hb-NoX"/>
+                                    <constraint firstItem="9BH-Mb-DW7" firstAttribute="centerX" secondItem="6BU-82-DTq" secondAttribute="centerX" id="qT7-SH-atO"/>
+                                    <constraint firstItem="9BH-Mb-DW7" firstAttribute="top" secondItem="6BU-82-DTq" secondAttribute="top" id="uFN-Ay-kVs"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Qxa-UY-aco" secondAttribute="trailing" id="6hS-GZ-qaj"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="6BU-82-DTq" secondAttribute="bottom" constant="-62" id="Hdh-7Z-1qt"/>
                             <constraint firstAttribute="trailing" secondItem="6BU-82-DTq" secondAttribute="trailing" id="IN9-by-PJK"/>
                             <constraint firstItem="Qxa-UY-aco" firstAttribute="leading" secondItem="1Mj-Cv-hnx" secondAttribute="leading" id="YgW-pB-5yB"/>
                             <constraint firstItem="6BU-82-DTq" firstAttribute="leading" secondItem="1Mj-Cv-hnx" secondAttribute="leading" id="a3J-U5-RAj"/>
                             <constraint firstItem="Qxa-UY-aco" firstAttribute="top" secondItem="1Mj-Cv-hnx" secondAttribute="top" id="kdy-9Z-Zrw"/>
-                            <constraint firstItem="6BU-82-DTq" firstAttribute="top" secondItem="Qxa-UY-aco" secondAttribute="bottom" constant="8" symbolic="YES" id="oTo-Em-yoJ"/>
+                            <constraint firstItem="6BU-82-DTq" firstAttribute="top" secondItem="Qxa-UY-aco" secondAttribute="bottom" id="oTo-Em-yoJ"/>
+                            <constraint firstItem="6BU-82-DTq" firstAttribute="bottom" secondItem="bq5-l1-ZGM" secondAttribute="top" id="sty-oQ-BLz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="leftImg" destination="uMP-xx-z9S" id="7lD-fR-OHk"/>
                         <outlet property="rightImg" destination="lNN-XZ-5p8" id="dq7-mQ-YKq"/>
+                        <outlet property="scrollContentView" destination="9BH-Mb-DW7" id="fgu-a6-1HB"/>
                         <outlet property="searchView" destination="T2i-A6-kYR" id="hOo-zK-2jX"/>
                     </connections>
                 </viewController>
