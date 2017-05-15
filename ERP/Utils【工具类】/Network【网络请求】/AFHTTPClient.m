@@ -68,6 +68,7 @@
     NSString * parStr = @"";
     for(NSString * key in newArray){
         NSString * value = [newParams objectForKey:key];
+        NSLog(@"%@", value);
         if(![value isEqualToString:@""] && [value length]!=0){
             NSString * str = [NSString stringWithFormat:@"%@%@%@%@%@", parStr, @"&", key, @"=", value];
             parStr = str;
@@ -80,7 +81,7 @@
     return @"";
 }
 
-+ (void)PostService:(UIViewController *)view reqUrl:(NSString *)reqUrl params:(NSDictionary *)params success:(void(^)(id data))success fail:(void(^)())fail loadingText:(NSString *)loadingText showLoading:(BOOL)showLoading
++ (void)PostService:(UIViewController *)view reqUrl:(NSString *)reqUrl params:(NSDictionary *)params success:(void(^)(id data))success fail:(void(^)())fail loadingText:(NSString *)loadingText showLoading:(BOOL)showLoading bizError:(BOOL)bizError
 {
     MBProgressHUD * loading;
     //显示加载框
@@ -105,7 +106,7 @@
     [newParams setValue:[self getTimestamp] forKey:@"timestamp"];
     [newParams setValue:[self getToken] forKey:@"token"];
     [newParams setValue:[self getSignstr:newParams] forKey:@"signstr"];
-    //NSLog(@"%@", newParams);
+    NSLog(@"%@", newParams);
     
     [manager POST:url parameters:newParams progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -118,8 +119,14 @@
         if([response[@"error_code"] intValue] == -12 || [response[@"error_code"] intValue] == -15){
             [self goLoginView:view];
         }else if([response[@"error_code"] intValue] < 0){
-            MBProgressHUD * errorDialog = [self showReqLoading:view loadingText:response[@"error_message"] onlyShowText:YES];
-            [self hideReqLoading:errorDialog afterDelay:2];
+            if(bizError){
+                if(success){
+                    success(responseObject);
+                }
+            }else{
+                MBProgressHUD * errorDialog = [self showReqLoading:view loadingText:response[@"error_message"] onlyShowText:YES];
+                [self hideReqLoading:errorDialog afterDelay:2];
+            }
         }else{
             if(success){
                 success(responseObject);

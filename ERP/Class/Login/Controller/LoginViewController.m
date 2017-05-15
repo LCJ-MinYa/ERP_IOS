@@ -63,7 +63,7 @@
             main.window.rootViewController = tabBarView;
         } fail:^{
             NSLog(@"请求错误");
-        } loadingText:@"登录中..." showLoading:YES];
+        } loadingText:@"登录中..." showLoading:YES bizError:NO];
     }
 }
 

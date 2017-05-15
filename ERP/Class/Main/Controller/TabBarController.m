@@ -57,6 +57,8 @@
     //添加第五个导航子控制器[我的]
     MineViewController * mine = [[MineViewController alloc] init];
     [self creatNav:mine image:[UIImage imageNamed:@"mine"] selectImage:[UIImage imageNamed:@"select_mine"] title:@"我的"];
+    
+    [UITabBar appearance].barTintColor = [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1];
 }
 
 //封装导航控制器的创建
@@ -80,7 +82,6 @@
     nav.tabBarItem.title = title;
     nav.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     nav.tabBarItem.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
     [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:50/255.0 green:50/255.0 blue:50/255.0 alpha:1]} forState:UIControlStateNormal];
     [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:246/255.0 green:90/255.0 blue:68/255.0 alpha:1]} forState:UIControlStateSelected];
     

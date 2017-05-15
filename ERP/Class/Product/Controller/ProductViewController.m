@@ -69,7 +69,7 @@
 {
     [AFHTTPClient PostService:self reqUrl:GLOBAL_INFO params:nil success:^(id data) {
         [self getPageData];
-    } fail:nil loadingText:nil showLoading:NO];
+    } fail:nil loadingText:nil showLoading:NO bizError:NO];
 }
 
 //页面数据开始加载
@@ -104,7 +104,7 @@
         NSMutableArray * bannerData = response[@"banner"];
         [self dealBannerData:bannerData];
         
-    } fail:nil loadingText:nil showLoading:NO];
+    } fail:nil loadingText:nil showLoading:NO bizError:YES];
 }
 
 //处理商品banner
@@ -126,13 +126,13 @@
 - (void)getProductListData:(dispatch_semaphore_t)semaphore
 {
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
-    [params setObject:@1 forKey:@"isRecommend"];
-    [params setObject:@1 forKey:@"includeOOS"];
-    [params setObject:@1 forKey:@"pageIndex"];
-    [params setObject:@PAGE_SIZE forKey:@"pageSize"];
-    [AFHTTPClient PostService:self reqUrl:PRODUCT_LIST params:nil success:^(id data) {
+    [params setValue:@"1" forKey:@"isRecommend"];
+    [params setValue:@"1" forKey:@"includeOOS"];
+    [params setValue:@"1" forKey:@"pageIndex"];
+    [params setValue:PAGE_SIZE forKey:@"pageSize"];
+    [AFHTTPClient PostService:self reqUrl:PRODUCT_LIST params:params success:^(id data) {
         dispatch_semaphore_signal(semaphore);
-    } fail:nil loadingText:nil showLoading:NO];
+    } fail:nil loadingText:nil showLoading:NO bizError:YES];
 }
 
 //封装显示网络请求等待
