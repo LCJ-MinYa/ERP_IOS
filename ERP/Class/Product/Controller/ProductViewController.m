@@ -9,7 +9,6 @@
 #import "ProductViewController.h"
 #import "ProductClassViewController.h"
 #import "AFHTTPClient.h"
-#import "APIConfig.h"
 #import <MBProgressHUD.h>
 #import <SDCycleScrollView.h>
 
@@ -102,17 +101,20 @@
     [AFHTTPClient PostService:self reqUrl:BANNER_NOTICE params:nil success:^(id data) {
         dispatch_semaphore_signal(semaphore);
         NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-        NSArray * bannerData = response[@"banner"];
+        NSMutableArray * bannerData = response[@"banner"];
         [self dealBannerData:bannerData];
         
     } fail:nil loadingText:nil showLoading:NO];
 }
 
 //处理商品banner
-- (void)dealBannerData:(NSArray *)bannerData
+- (void)dealBannerData:(NSMutableArray *)bannerData
 {
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    SDCycleScrollView * bannerView = [SDCycleScrollView  cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/3) delegate:self placeholderImage:[UIImage imageNamed:@"default"]];
+    if(bannerData.count == 0){
+        [bannerData addObject:@"index_banner_1"];
+        [bannerData addObject:@"index_banner_2"];
+    }
+    SDCycleScrollView * bannerView = [SDCycleScrollView  cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH/3) delegate:self placeholderImage:[UIImage imageNamed:@"default"]];
     bannerView.autoScrollTimeInterval = 5;
     bannerView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     bannerView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
@@ -123,6 +125,11 @@
 //获取商品列表
 - (void)getProductListData:(dispatch_semaphore_t)semaphore
 {
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    [params setObject:@1 forKey:@"isRecommend"];
+    [params setObject:@1 forKey:@"includeOOS"];
+    [params setObject:@1 forKey:@"pageIndex"];
+    [params setObject:@PAGE_SIZE forKey:@"pageSize"];
     [AFHTTPClient PostService:self reqUrl:PRODUCT_LIST params:nil success:^(id data) {
         dispatch_semaphore_signal(semaphore);
     } fail:nil loadingText:nil showLoading:NO];

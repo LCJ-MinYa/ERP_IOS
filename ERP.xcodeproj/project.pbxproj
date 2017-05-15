@@ -18,6 +18,8 @@
 		3548BE6C1EBC21EA000E0B16 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3548BE6B1EBC21EA000E0B16 /* Podfile */; };
 		356D0FAB1EC2A584001155CE /* FeHourGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 356D0FA61EC2A584001155CE /* FeHourGlass.m */; };
 		356D0FAC1EC2A584001155CE /* FeHourGlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356D0FAA1EC2A584001155CE /* FeHourGlassViewController.m */; };
+		35859EFA1EC999E6005EEA7D /* CommonConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 35859EF91EC999E6005EEA7D /* CommonConfig.m */; };
+		35859EFE1EC9A300005EEA7D /* DimensConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 35859EFD1EC9A300005EEA7D /* DimensConfig.m */; };
 		35A75E3C1EBC5C20003330D3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A75E3A1EBC5C20003330D3 /* Login.storyboard */; };
 		35AC78601EC4590800BD5F45 /* ProductClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AC785F1EC4590700BD5F45 /* ProductClassViewController.m */; };
 		35CA8DC81EBC5D7500BD3415 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA8DC71EBC5D7500BD3415 /* LoginViewController.m */; };
@@ -73,6 +75,11 @@
 		356D0FA61EC2A584001155CE /* FeHourGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlass.m; sourceTree = "<group>"; };
 		356D0FA91EC2A584001155CE /* FeHourGlassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlassViewController.h; sourceTree = "<group>"; };
 		356D0FAA1EC2A584001155CE /* FeHourGlassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlassViewController.m; sourceTree = "<group>"; };
+		35859EF81EC999E6005EEA7D /* CommonConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonConfig.h; sourceTree = "<group>"; };
+		35859EF91EC999E6005EEA7D /* CommonConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonConfig.m; sourceTree = "<group>"; };
+		35859EFB1EC99C67005EEA7D /* pchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pchFile.pch; path = ../pchFile.pch; sourceTree = "<group>"; };
+		35859EFC1EC9A300005EEA7D /* DimensConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensConfig.h; sourceTree = "<group>"; };
+		35859EFD1EC9A300005EEA7D /* DimensConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimensConfig.m; sourceTree = "<group>"; };
 		35A75E3A1EBC5C20003330D3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		35AC785E1EC4590700BD5F45 /* ProductClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductClassViewController.h; sourceTree = "<group>"; };
 		35AC785F1EC4590700BD5F45 /* ProductClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductClassViewController.m; sourceTree = "<group>"; };
@@ -321,8 +328,13 @@
 		35CA8DCE1EBC835D00BD3415 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				35859EFB1EC99C67005EEA7D /* pchFile.pch */,
 				35CA8DCF1EBC83C300BD3415 /* APIConfig.h */,
 				35CA8DD01EBC83C300BD3415 /* APIConfig.m */,
+				35859EF81EC999E6005EEA7D /* CommonConfig.h */,
+				35859EF91EC999E6005EEA7D /* CommonConfig.m */,
+				35859EFC1EC9A300005EEA7D /* DimensConfig.h */,
+				35859EFD1EC9A300005EEA7D /* DimensConfig.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -727,11 +739,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				356D0FAC1EC2A584001155CE /* FeHourGlassViewController.m in Sources */,
+				35859EFA1EC999E6005EEA7D /* CommonConfig.m in Sources */,
 				35DAAEF91EC3FAC700AF7D21 /* OrderViewController.m in Sources */,
 				350DFE371EC1C33F0037CEE0 /* UIColor+flat.m in Sources */,
 				35DAAEF31EC3FAAC00AF7D21 /* MineViewController.m in Sources */,
 				35DAAEED1EC3FA8300AF7D21 /* ProductViewController.m in Sources */,
 				3548BE511EBC1719000E0B16 /* main.m in Sources */,
+				35859EFE1EC9A300005EEA7D /* DimensConfig.m in Sources */,
 				35DAAEF01EC3FA9A00AF7D21 /* CartViewController.m in Sources */,
 				35DAAEF61EC3FABA00AF7D21 /* MsgViewController.m in Sources */,
 				35DAAEE71EC3F93600AF7D21 /* TabBarController.m in Sources */,
@@ -883,6 +897,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N8578NSZEV;
 				ENABLE_BITCODE = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ERP/pchFile.pch";
 				INFOPLIST_FILE = ERP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -898,6 +914,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N8578NSZEV;
 				ENABLE_BITCODE = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ERP/pchFile.pch";
 				INFOPLIST_FILE = ERP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

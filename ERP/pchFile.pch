@@ -1,0 +1,12 @@
+#ifndef pchFile_pch
+#define pchFile_pch
+
+#ifdef __OBJC__
+
+#import "APIConfig.h"
+#import "CommonConfig.h"
+#import "DimensConfig.h"
+
+#endif
+
+#endif

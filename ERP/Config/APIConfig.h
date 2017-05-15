@@ -10,15 +10,22 @@
 
 @interface APIConfig : NSObject
 
-//通用接口
-extern NSString * const API;
 
-//全局初始化请求
-extern NSString * const GLOBAL_INFO;
-//登录接口
-extern NSString * const LOGIN;
+#ifdef DEBUG
+//debug状态下的测试api
+#define API_BASE_URL @"http://zxdhapi.cmgrasp.com"
 
-//商品接口
-extern NSString * const BANNER_NOTICE;      //商品首页banner和公告信息
-extern NSString * const PRODUCT_LIST;      //商品首页banner和公告信息
+#else
+//Release状态下的线上API
+#define API_BASE_URL     @"http://ydhapi.zhangyuxia.com.cn"
+#endif
+
+//接口列表
+#define GLOBAL_INFO @"/api/system/getGlobalInfo" //全局初始化请求
+#define LOGIN @"/api/user/login" //登录接口
+
+//商品相关接口
+#define BANNER_NOTICE @"/api/product/getBannerNotice" //商品首页banner和公告信息
+#define PRODUCT_LIST @"/api/product/getProductList" //商品列表
+
 @end

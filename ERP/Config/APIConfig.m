@@ -10,10 +10,4 @@
 
 @implementation APIConfig
 
-NSString * const API = @"http://zxdhapi.cmgrasp.com";  //http://ydhapi.zhangyuxia.com.cn
-NSString * const GLOBAL_INFO = @"/api/system/getGlobalInfo";
-NSString * const LOGIN = @"/api/user/login";
-NSString * const BANNER_NOTICE = @"/api/product/getBannerNotice";
-NSString * const PRODUCT_LIST = @"/api/product/getProductList";
-
 @end

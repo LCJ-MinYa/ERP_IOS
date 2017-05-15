@@ -8,7 +8,6 @@
 
 #import "AFHTTPClient.h"
 #import <AFNetworking.h>
-#import "APIConfig.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <MBProgressHUD.h>
 #import "LoginViewController.h"
@@ -94,7 +93,7 @@
     //设置请求超时时间
     manager.requestSerializer.timeoutInterval = 5.0;
     //转换请求链接为UTF8
-    NSString * joinUrl = [API stringByAppendingString:reqUrl];
+    NSString * joinUrl = [API_BASE_URL stringByAppendingString:reqUrl];
     NSString * url = [joinUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     //封装基本参数
@@ -119,10 +118,8 @@
         if([response[@"error_code"] intValue] == -12 || [response[@"error_code"] intValue] == -15){
             [self goLoginView:view];
         }else if([response[@"error_code"] intValue] < 0){
-            dispatch_async(dispatch_get_main_queue(), ^{
-                MBProgressHUD * errorDialog = [self showReqLoading:view loadingText:response[@"error_message"] onlyShowText:YES];
-                [self hideReqLoading:errorDialog afterDelay:2];
-            });
+            MBProgressHUD * errorDialog = [self showReqLoading:view loadingText:response[@"error_message"] onlyShowText:YES];
+            [self hideReqLoading:errorDialog afterDelay:2];
         }else{
             if(success){
                 success(responseObject);
