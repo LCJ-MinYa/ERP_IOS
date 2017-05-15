@@ -86,7 +86,7 @@
     MBProgressHUD * loading;
     //显示加载框
     if(showLoading){
-        loading = [self showReqLoading:view loadingText:loadingText];
+        loading = [self showReqLoading:view loadingText:loadingText onlyShowText:NO];
     }
     
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
@@ -112,12 +112,17 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //关闭加载框
         if(showLoading){
-            [self hideReqLoading:loading];
+            [self hideReqLoading:loading afterDelay:0];
         }
         NSDictionary * response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        //NSLog(@"%@", response);
+        NSLog(@"%@", response);
         if([response[@"error_code"] intValue] == -12 || [response[@"error_code"] intValue] == -15){
             [self goLoginView:view];
+        }else if([response[@"error_code"] intValue] < 0){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                MBProgressHUD * errorDialog = [self showReqLoading:view loadingText:response[@"error_message"] onlyShowText:YES];
+                [self hideReqLoading:errorDialog afterDelay:2];
+            });
         }else{
             if(success){
                 success(responseObject);
@@ -140,14 +145,18 @@
 }
 
 //封装显示网络请求等待
-+ (MBProgressHUD *)showReqLoading:(UIViewController *)view loadingText:(NSString *)loadingText
++ (MBProgressHUD *)showReqLoading:(UIViewController *)view loadingText:(NSString *)loadingText onlyShowText:(BOOL)onlyShowText
 {
     MBProgressHUD * loading = [MBProgressHUD showHUDAddedTo:view.view animated:YES];
-    loading.mode = MBProgressHUDModeIndeterminate;
-    if([loadingText isEqualToString:@""] || [loadingText length]==0){
-        loading.label.text = @"正在加载...";
+    if(onlyShowText){
+        loading.mode = MBProgressHUDModeText;
     }else{
-        loading.label.text = loadingText;
+        loading.mode = MBProgressHUDModeIndeterminate;
+    }
+    if([loadingText isEqualToString:@""] || [loadingText length]==0){
+        loading.detailsLabel.text = @"正在加载...";
+    }else{
+        loading.detailsLabel.text = loadingText;
     }
     loading.contentColor = [UIColor whiteColor];
     loading.bezelView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
@@ -155,8 +164,8 @@
 }
 
 //封装关闭网络请求等待
-+ (void)hideReqLoading:(MBProgressHUD *)loadingClass
++ (void)hideReqLoading:(MBProgressHUD *)loadingClass afterDelay:(NSInteger)afterDelay
 {
-    [loadingClass hideAnimated:YES afterDelay:0];
+    [loadingClass hideAnimated:YES afterDelay:afterDelay];
 }
 @end

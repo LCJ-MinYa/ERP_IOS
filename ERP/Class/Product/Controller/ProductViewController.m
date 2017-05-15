@@ -13,7 +13,7 @@
 #import <MBProgressHUD.h>
 #import <SDCycleScrollView.h>
 
-@interface ProductViewController ()
+@interface ProductViewController ()<SDCycleScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (weak, nonatomic) IBOutlet UIImageView *leftImg;
