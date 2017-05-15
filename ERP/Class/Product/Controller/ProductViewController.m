@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *leftImg;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImg;
 @property (weak, nonatomic) IBOutlet UIView *scrollContentView;
+@property (weak, nonatomic) IBOutlet UIView *bannerViewBox;
 
 @end
 
@@ -111,8 +112,12 @@
 - (void)dealBannerData:(NSArray *)bannerData
 {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    SDCycleScrollView * bannerView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/3) imageNamesGroup:@[@"nav_bg",@"cart",@"mine"]];
-    [_scrollContentView addSubview:bannerView];
+    SDCycleScrollView * bannerView = [SDCycleScrollView  cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/3) delegate:self placeholderImage:[UIImage imageNamed:@"default"]];
+    bannerView.autoScrollTimeInterval = 5;
+    bannerView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    bannerView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+    bannerView.imageURLStringsGroup = bannerData;
+    [_bannerViewBox addSubview:bannerView];
 }
 
 //获取商品列表
