@@ -100,8 +100,7 @@
 {
     [AFHTTPClient PostService:self reqUrl:BANNER_NOTICE params:nil success:^(id data) {
         dispatch_semaphore_signal(semaphore);
-        NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-        NSMutableArray * bannerData = response[@"banner"];
+        NSMutableArray * bannerData = data[@"banner"];
         [self dealBannerData:bannerData];
         
     } fail:nil loadingText:nil showLoading:NO bizError:YES];
@@ -129,7 +128,7 @@
     [params setValue:@"1" forKey:@"isRecommend"];
     [params setValue:@"1" forKey:@"includeOOS"];
     [params setValue:@"1" forKey:@"pageIndex"];
-    [params setValue:PAGE_SIZE forKey:@"pageSize"];
+    [params setValue:THE_PAGE_SIZE forKey:@"pageSize"];
     [AFHTTPClient PostService:self reqUrl:PRODUCT_LIST params:params success:^(id data) {
         dispatch_semaphore_signal(semaphore);
     } fail:nil loadingText:nil showLoading:NO bizError:YES];

@@ -13,7 +13,7 @@
 
 #ifdef DEBUG
 //debug状态下的测试api
-#define API_BASE_URL @"http://zxdhapi.cmgrasp.com"
+#define API_BASE_URL @"http://ydhapi.zhangyuxia.com.cn"
 
 #else
 //Release状态下的线上API

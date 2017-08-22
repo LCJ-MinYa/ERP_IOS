@@ -52,8 +52,7 @@
         [params setValue:_userInput.text forKey:@"userName"];
         [params setValue:_pwdInput.text forKey:@"password"];
         [AFHTTPClient PostService:self reqUrl:LOGIN params:params success:^(id data) {
-            NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-            NSDictionary * result = response[@"data"];
+            NSDictionary * result = data[@"data"];
             [[NSUserDefaults standardUserDefaults] setValue:result[@"profileId"] forKey:@"profileId"];
             [[NSUserDefaults standardUserDefaults] setValue:result[@"token"] forKey:@"token"];
             

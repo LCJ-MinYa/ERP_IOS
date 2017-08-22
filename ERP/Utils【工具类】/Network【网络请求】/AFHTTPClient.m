@@ -114,14 +114,14 @@
         if(showLoading){
             [self hideReqLoading:loading afterDelay:0];
         }
-        NSDictionary * response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSDictionary * response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"%@", response);
         if([response[@"error_code"] intValue] == -12 || [response[@"error_code"] intValue] == -15){
             [self goLoginView:view];
         }else if([response[@"error_code"] intValue] < 0){
             if(bizError){
                 if(success){
-                    success(responseObject);
+                    success(response);
                 }
             }else{
                 MBProgressHUD * errorDialog = [self showReqLoading:view loadingText:response[@"error_message"] onlyShowText:YES];
@@ -129,7 +129,7 @@
             }
         }else{
             if(success){
-                success(responseObject);
+                success(response);
             }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
